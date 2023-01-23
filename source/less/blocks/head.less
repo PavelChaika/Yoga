@@ -1,0 +1,60 @@
+.head {
+    height: 336px;
+    background-image: url(../img/yoga.png);
+}
+
+.head__tagline {
+    font-family: "Caveat-Regular";
+    font-weight: 400;
+    font-size: 18px;
+    padding-top: 100px;
+    text-align: center;
+    margin: 0;
+}
+
+.head__title {
+    font-size: 67px;
+    line-height: 52px;
+    text-align: center;
+    color: #fff;
+    margin: 27px 0 25px;
+    font-weight: 400;
+}
+
+.head__appointment {
+    width: 174px;
+    margin: 0 auto;
+    color: #E65C7B;
+    display: flex;
+    justify-content: space-between;
+    text-align: right;
+    text-align: left;
+    line-height: 12px;
+}
+
+.head__appointment a {
+    text-decoration: none;
+    width: 137px;
+    line-height: 12px;
+}
+
+.head__appointment-decor {
+    width: 30px;
+    height: 26px;
+    background-color: #E65C7B;
+    position: relative;
+}
+
+.head__appointment-decor::before {
+    content: "";
+    width: 5px;
+    height: 5px;
+    background-color: #E65C7B;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    transform: rotate(45deg);
+    border: 1px solid #fff;
+    border-bottom: none;
+    border-left: none;
+}
