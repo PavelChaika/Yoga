@@ -1,0 +1,52 @@
+.btn {
+    width: 105px;
+    margin: 30px auto 70px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn p {
+    margin: 0;
+}
+
+.btn__back,
+.btn__forward {
+    width: 31px;
+    height: 16px;
+    border: 1px solid #8E80A9;
+    position: relative;
+}
+
+.btn__forward {
+    background-color: #8E80A9;
+}
+
+.btn button:focus,
+.btn button:hover {
+    background-color: #8E80A9;
+}
+
+.btn__back::before,
+.btn__forward::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    position: absolute;
+    top: 4px;
+    left: 11px;
+    border: 1px solid #8E80A9;
+    border-top: none;
+    border-right: none;
+    transform: rotate(45deg);
+}
+
+.btn__forward::before {
+    transform: rotate(225deg);
+    border-color: #fff;
+}
+
+.btn__back:focus::before,
+.btn__back:hover::before {
+    border-color: #fff;
+}
+
