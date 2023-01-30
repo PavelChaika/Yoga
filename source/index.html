@@ -158,11 +158,20 @@
                 Абонементы
             </h2>
             <div class="subscription__list">
-                <button class="subscription__period" type="button">1 месяц</button>
-                <button class="subscription__period" type="button">6 месяцев</button>
-                <button class="subscription__period" type="button">12 месяцев</button>
+                <button class="subscription__month" type="button">
+                    1 месяц
+                    <span class="subscription__month-decor"></span>
+                </button>
+                <button class="subscription__halfyear" type="button">
+                    6 месяцев
+                    <span class="subscription__halfyear-decor"></span>
+                </button>
+                <button class="subscription__year" type="button">
+                    12 месяцев
+                    <span class="subscription__year-decor"></span>
+                </button>
             </div>
-            <ul class="subscription__schedule subscription__schedule--month">
+            <ul class="subscription__schedule subscription__schedule--month subscription__schedule--month-off">
                 <li class="subscription__morning">
                     <h4>
                         Утро
@@ -605,27 +614,55 @@
         </div>
     </footer>
 
-    <!-- <script>
-        var navPop = document.querySelector('.pop-up');
-        var popToggle = document.querySelector('.pop-up__toggle');
-        var navToggle = document.querySelector('.main-nav__toggle');
+    <script>
+        var monShed = document.querySelector('.subscription__schedule--month');
+        var monoffShed = document.querySelector('.subscription__schedule--month-off');
+        var halfShed = document.querySelector('.subscription__schedule--halfyear');
+        var yearShed = document.querySelector('.subscription__schedule--year');
+        var monToggle = document.querySelector('.subscription__month');
+        var halfToggle = document.querySelector('.subscription__halfyear');
+        var yearToggle = document.querySelector('.subscription__year');
+        var monlineToggle = document.querySelector('.subscription__month-decor');
+        var halflineToggle = document.querySelector('.subscription__halfyear-decor');
+        var yearlineToggle = document.querySelector('.subscription__year-decor');
+
     
-        navPop.classList.remove('pop-up--nojs');  
+        monoffShed.classList.remove('subscription__schedule--month-off');  
+        halflineToggle.classList.remove('subscription__halfyear-decor');  
+        yearlineToggle.classList.remove('subscription__year-decor');  
     
-        popToggle.addEventListener('click', function() {
-                navPop.classList.add('pop-up--closed');
-                navPop.classList.remove('pop-up--opened');
-                navToggle.classList.remove('main-nav__toggle--hidden');
+        monToggle.addEventListener('click', function() {
+                monoffShed.classList.remove('subscription__schedule--month-off');
+                halfShed.classList.add('subscription__schedule--halfyear');
+                yearShed.classList.add('subscription__schedule--year');
+                monlineToggle.classList.add('subscription__month-decor');
+                halflineToggle.classList.remove('subscription__halfyear-decor');
+                yearlineToggle.classList.remove('subscription__year-decor');
+        }
+        );
+    
+        halfToggle.addEventListener('click', function() {
+                monoffShed.classList.add('subscription__schedule--month-off');
+                halfShed.classList.remove('subscription__schedule--halfyear');
+                yearShed.classList.add('subscription__schedule--year');
+                monlineToggle.classList.remove('subscription__month-decor');
+                halflineToggle.classList.add('subscription__halfyear-decor');
+                yearlineToggle.classList.remove('subscription__year-decor');
+        }
+        );
+    
+        yearToggle.addEventListener('click', function() {
+            monoffShed.classList.add('subscription__schedule--month-off');
+                halfShed.classList.add('subscription__schedule--halfyear');
+                yearShed.classList.remove('subscription__schedule--year');
+                monlineToggle.classList.remove('subscription__month-decor');
+                halflineToggle.classList.remove('subscription__halfyear-decor');
+                yearlineToggle.classList.add('subscription__year-decor');
         }
         );
 
-        navToggle.addEventListener('click', function() {
-                navPop.classList.remove('pop-up--closed');
-                navPop.classList.add('pop-up--opened');
-                navToggle.classList.add('main-nav__toggle--hidden');
-        }
-        );
-    </script> -->
+
+    </script>
 
 </body>
 

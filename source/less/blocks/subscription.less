@@ -15,7 +15,9 @@
     margin: 40px 49px 35px;
 }
 
-.subscription__period {
+.subscription__month,
+.subscription__halfyear,
+.subscription__year {
     font-size: 12px;
     line-height: 12px;
     color: #E65C7B;
@@ -26,9 +28,10 @@
     position: relative;
 }
 
-.subscription__period:nth-child(1):after {
-    content: "";
-    width: 45px;
+.subscription__month-decor,
+.subscription__halfyear-decor,
+.subscription__year-decor {
+    width: 100%;
     height: 1px;
     background-color: #E65C7B;
     position: absolute;
@@ -36,25 +39,7 @@
     left: 0px;
 }
 
-.subscription__period:nth-child(2):after {
-    content: "";
-    width: 62px;
-    height: 1px;
-    background-color: #E65C7B;
-    position: absolute;
-    bottom: -5px;
-    left: 0px;
-    display: none;
-}
-
-.subscription__period:nth-child(3):after {
-    content: "";
-    width: 65px;
-    height: 1px;
-    background-color: #E65C7B;
-    position: absolute;
-    bottom: -5px;
-    left: 0px;
+.subscription__schedule--month-off {
     display: none;
 }
 
