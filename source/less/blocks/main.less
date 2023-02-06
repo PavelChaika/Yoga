@@ -1,10 +1,46 @@
-.main {
-    // background-color: #000;
-}
-
 .main-nav {
     position: relative;
+    width: 60px;
     height: 17px;
+}
+
+.main-nav svg {
+    margin-top: 2px;
+
+    @media (min-width: @tablet-width) {
+        width: 12px;
+        height: 8px;
+    }
+
+    @media (min-width: @desktop-width) {
+        width: 24px;
+        height: 14px;
+    }
+}
+
+.main-nav__menu {
+
+    @media (min-width: @tablet-width) {
+        display: flex;
+    }
+
+}
+
+.main-nav p {
+    display: none;
+    color: @main-color;
+    margin: 0;
+
+    @media (min-width: @tablet-width) {
+        display: block;
+        width: 41px;
+        height: 12px;
+        padding-left: 2px;
+    }
+
+    @media (min-width: @desktop-width) {
+        padding-left: 6px;
+    }
 }
 
 .main-nav__toggle-open {
@@ -23,6 +59,14 @@
     position: absolute;
     top: 0px;
     left: 0px;
+
+    @media (min-width: @tablet-width) {
+        width: 12px;
+    }
+
+    @media (min-width: @desktop-width) {
+        width: 20px;
+    }
 }
 
 .main-nav__toggle-close::after,
@@ -30,18 +74,34 @@
     content: "";
     width: 30px;
     height: 1px;
-    background-color: #8E80A9;
+    background-color: @main-color;
     position: absolute;
     top: 8px;
     right: 0px;
+
+    @media (min-width: @tablet-width) {
+        width: 12px;
+    }
+
+    @media (min-width: @desktop-width) {
+        width: 20px;
+    }
 }
 
 .main-nav__toggle-close::after{
     transform: rotate(28deg);
+
+    @media (min-width: @tablet-width) {
+        transform: rotate(45deg);
+    }
 }
 
 .main-nav__toggle-close::before{
     transform: rotate(-28deg);
+
+    @media (min-width: @tablet-width) {
+        transform: rotate(-45deg);
+    }
 }
 
 
@@ -52,10 +112,16 @@
     font-size: 14px;
     line-height: 20px;
     color: #fff;
-    background-color: #8E80A9;
+    background-color: @main-color;
     z-index: 1;
     width: 116px;
     opacity: 0.8;
+
+    @media (min-width: @desktop-width) {
+        font-size: 20px;
+        line-height: 30px;
+        width: 180px;
+    }
 }
 
 .main-nav__wrapper--close {

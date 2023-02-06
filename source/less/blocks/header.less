@@ -1,16 +1,17 @@
 .header {
-    // position: absolute;
-    // top: 23px;
-    // left: 0;
     display: flex;
     justify-content: space-between;
     margin: 0 15px -38px;
-}
 
-.header__contacts {
-    // width: 305px;
-    // display: block;
-    // text-align: right;
+    @media (min-width: @tablet-width) {
+        margin: 0 80px -40px;
+        // font-size: 12px;
+    }
+
+    @media (min-width: @desktop-width) {
+        margin: 0 140px -84px;
+        font-size: 16px;
+    }
 }
 
 .header__contacts a {

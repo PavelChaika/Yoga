@@ -1,6 +1,18 @@
 .head {
     height: 336px;
     background-image: url(../img/yoga.png);
+
+    @media (min-width: @tablet-width) {
+        width: 768px;
+        height: 484px;
+        background: url(../img/yoga_tablet.png) no-repeat;
+    }
+
+    @media (min-width: @desktop-width) {
+        width: 1447px;
+        height: 908px;
+        background: url(../img/yoga_desktop.png) no-repeat;
+    }
 }
 
 .head__tagline {
@@ -10,6 +22,18 @@
     padding-top: 100px;
     text-align: center;
     margin: 0;
+
+    @media (min-width: @tablet-width) {
+        font-size: 24px;
+        padding: 113px 0 0 164px;
+        text-align: left;
+    }
+
+    @media (min-width: @desktop-width) {
+        font-size: 45px;
+        line-height: 46px;
+        padding: 213px 0 0 307px;
+    }
 }
 
 .head__title {
@@ -19,7 +43,18 @@
     color: #fff;
     margin: 27px 0 25px;
     font-weight: 400;
-    opacity: 0.7;
+    // opacity: 0.7;
+
+    @media (min-width: @tablet-width) {
+        font-size: 144px;
+        line-height: 100px;
+    }
+
+    @media (min-width: @desktop-width) {
+        font-size: 265px;
+        line-height: 200px;
+        margin: 40px 0;
+    }
 }
 
 .head__appointment {
@@ -32,11 +67,22 @@
     text-align: left;
     line-height: 12px;
     text-decoration: none;
+
+    @media (min-width: @desktop-width) {
+        font-size: 14px;
+        width: 260px;
+    }
 }
 
 .head__appointment span {
     width: 137px;
     padding-top: 2px;
+
+    @media (min-width: @desktop-width) {
+        width: 191px;
+        font-size: 14px;
+        line-height: 20px;
+    }
 }
 
 .head__appointment-decor {
@@ -44,6 +90,11 @@
     height: 26px;
     background-color: #E65C7B;
     position: relative;
+
+    @media (min-width: @desktop-width) {
+        width: 56px;
+        height: 48px;
+    }
 }
 
 .head__appointment-decor::before {
@@ -58,4 +109,11 @@
     border: 1px solid #fff;
     border-bottom: none;
     border-left: none;
+
+    @media (min-width: @desktop-width) {
+        width: 16px;
+        height: 16px;
+        top: 16px;
+        left: 16px;
+    }
 }
