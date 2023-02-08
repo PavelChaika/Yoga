@@ -19,7 +19,7 @@
                 <svg width="30" height="13" viewBox="0 0 30 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M0 0.5H30M0 6.49948H30M0 12.5003H19.5" stroke="#8E80A9" />
                 </svg>
-                <p>Меню</p>
+                <span>Меню</span>
             </button>
             <button class="main-nav__toggle-close js-main-nav__toggle-close" type="button">
                 <span class="visually-hidden">Закрыть меню</span>
@@ -83,7 +83,7 @@
             <ul class="direction__list">
                 <li class="direction__item">
                     <picture class="direction__pic">
-                        <source srcset="img/hatha-desktop.jpg, img/hatha-desktop_2x.jpg" media="(min-width: 1200px)">
+                        <source srcset="img/hatha-desktop.jpg, img/hatha-desktop_2x.jpg 2x" media="(min-width: 1440px)">
                         <source srcset="img/hatha-tablet.jpg, img/hatha-tablet_2x.jpg 2x" media="(min-width: 768px)">
                         <img class="direction__img" src="img/hatha.jpg" srcset="img/hatha_2x.jpg 2x" alt="Хатха-йога"
                             width="250" height="200">
@@ -97,39 +97,48 @@
                         <button class="direction__btn" type="button"></button>
                     </div>
                 </li>
-                <li class="direction__item">
-                    <picture class="direction__pic">
-                        <!-- <source srcset="img/hatha-desktop.jpg, img/hatha-desktop_2x.jpg" media="(min-width: 1200px)">
-                        <source srcset="img/hatha-tablet.jpg, img/hatha-tablet_2x.jpg 2x" media="(min-width: 768px)"> -->
-                        <img class="direction__img" src="img/ashatanga.jpg" srcset="img/ashatanga_2x.jpg 2x"
-                            alt="Хатха-йога" width="250" height="200">
-                    </picture>
-                    <div class="direction__conteiner">
-                        <div class="direction__description">
-                            <h3 class="direction__header">Ашатанга-йога</h3>
-                            <p class="direction__data">Пн, Ср, Пт – с 11:00 до 14:00 Вт, Чт – с 19:00 до 21:00</p>
-                            <p class="direction__instructor">Инструктор <br> Емельянова Полина</p>
-                        </div>
-                        <button class="direction__btn" type="button"></button>
-                    </div>
-                </li>
-                <li class="direction__item">
-                    <picture class="direction__pic">
-                        <!-- <source srcset="img/hatha-desktop.jpg, img/hatha-desktop_2x.jpg" media="(min-width: 1200px)">
-                        <source srcset="img/hatha-tablet.jpg, img/hatha-tablet_2x.jpg 2x" media="(min-width: 768px)"> -->
-                        <img class="direction__img" src="img/kundalini.jpg" srcset="img/kundalini_2x.jpg 2x"
-                            alt="Хатха-йога" width="250" height="200">
-                    </picture>
-                    <div class="direction__conteiner">
-                        <div class="direction__description">
-                            <h3 class="direction__header">Кундалини-йога</h3>
-                            <p class="direction__data">Пн, Ср, Пт – с 12:00 до 15:00 Вт, Чт – с 18:00 до 21:00</p>
-                            <p class="direction__instructor">Инструктор <br> Емельянова Полина</p>
-                        </div>
-                        <button class="direction__btn" type="button"></button>
-                    </div>
-                </li>
 
+                <li class="direction__item items">
+                    <ul class="items__list">
+                        <li class="items__item">
+                            <picture class="items__pic">
+                                <source srcset="img/ashatanga-desktop.jpg, img/ashatanga-desktop_2x.jpg 2x" media="(min-width: 1440px)">
+                                <source srcset="img/ashatanga-tablet.jpg, img/ashatanga-tablet_2x.jpg 2x" media="(min-width: 768px)">
+                                <img class="direction__img" src="img/ashatanga.jpg" srcset="img/ashatanga_2x.jpg 2x" alt="Ашатанга-йога" width="250"
+                                    height="200">
+                            </picture>
+                            <div class="items__conteiner">
+                                <div class="items__description">
+                                    <h3 class="direction__header">Ашатанга-йога</h3>
+                                    <p class="direction__data">Пн, Ср, Пт – с 11:00 до 14:00 Вт, Чт – с 19:00 до 21:00</p>
+                                    <p class="direction__instructor">Инструктор <br> Емельянова Полина</p>
+                                </div>
+                                <button class="items__btn" type="button"></button>
+                            </div>
+                        </li>
+                        <li class="items__item">
+                            <picture class="items__pic">
+                                <source srcset="img/kundalini-desktop.jpg, img/kundalini-desktop_2x.jpg 2x" media="(min-width: 1440px)">
+                                <source srcset="img/kundalini-tablet.jpg, img/kundalini-tablet_2x.jpg 2x" media="(min-width: 768px)">
+                                <img class="direction__img" src="img/kundalini.jpg" srcset="img/kundalini_2x.jpg 2x" alt="Кундалини-йога" width="250"
+                                    height="200">
+                            </picture>
+                            <div class="items__conteiner">
+                                <div class="items__description">
+                                    <h3 class="direction__header">Кундалини-йога</h3>
+                                    <p class="direction__data">Пн, Ср, Пт – с 12:00 до 15:00 Вт, Чт – с 18:00 до 21:00</p>
+                                    <p class="direction__instructor">Инструктор <br> Емельянова Полина</p>
+                                </div>
+                                <button class="items__btn" type="button"></button>
+                            </div>
+                        </li>
+                        <li class="items__item items__item--btn">
+                            <button>
+                                Смотреть больше
+                            </button>
+                        </li>
+                    </ul>
+                </li>                
             </ul>
         </section>
 
