@@ -1,18 +1,56 @@
 .subscription {
     margin: 70px 0 0 0;
     position: relative;
+
+    background: url(../img/subscription_back.png);
+    background-position: 0 106px;
+
+    @media (min-width: @tablet-width) {
+        background: url(../img/subscription_back-tablet.png);
+        background-position: 0 -16px;
+        margin-top: 132px;
+    }
+
+    @media (min-width: @desktop-width) {
+        background: url(../img/subscription_back-desktop.png) no-repeat;
+        background-position: 0 -68px;
+        margin-top: 154px;
+        padding-bottom: 146px;
+    }
 }
 
 .subscription__title {
     font-size: 18px;
     line-height: 20px;
     text-align: center;
+
+    @media (min-width: @tablet-width) {
+        font-size: 21px;
+        line-height: 15px;
+    }
+    
+    @media (min-width: @desktop-width) {
+        font-size: 30px;
+    }
 }
 
 .subscription__list {
     display: flex;
     justify-content: space-between;
-    margin: 40px 49px 35px;
+    margin: 40px auto 35px;
+    width: 250px;
+
+    @media (min-width: @tablet-width) {
+        width: 241px;
+        line-height: 20px;
+        margin: 23px auto 45px;
+    }
+    
+    @media (min-width: @desktop-width) {
+        width: 286px;
+        margin-top: 57px;
+        margin: 54px auto 49px;
+    }
 }
 
 .subscription__month,
@@ -22,7 +60,7 @@
     line-height: 12px;
     color: #E65C7B;
     border: none;
-    background-color: #fff;
+    background-color: transparent;
     cursor: pointer;
     padding: 0;
     position: relative;
@@ -39,15 +77,23 @@
     left: 0px;
 }
 
-.subscription__schedule--month-off {
-    display: none;
-}
-
 .subscription__schedule {
     text-align: center;
 
-    background: url(../img/subscription_back.png);
+    @media (min-width: @tablet-width) {
+        width: 623px;
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+    }
 
+    @media (min-width: @desktop-width) {
+        width: 931px;
+    }
+}
+
+.subscription__schedule--month-off {
+    display: none;
 }
 
 .subscription__schedule--halfyear,
@@ -57,21 +103,65 @@
 
 .subscription__schedule li {
     width: 250px;
-    margin: 0 auto;
+    margin: 0 auto 30px;
     background-color: #fff;
     box-shadow: 0px 4px 25px 0px rgba(142,128,169,.25);
-    margin-bottom: 30px;
+
+    @media (min-width: @tablet-width) {
+        width: 176px;
+        height: 159px;
+        margin: 0;
+    }
+
+    @media (min-width: @desktop-width) {
+        width: 263px;
+        height: 237px;
+        margin: 0;
+    }
+}
+
+.subscription__schedule li:nth-child(2) {
+    
+    @media (min-width: @tablet-width) {
+        width: 222px;
+        margin: 0;
+        height: 222px;
+    }
+    
+    @media (min-width: @desktop-width) {
+        width: 331px;
+        margin: 0;
+        height: 331px;
+    }
 }
 
 .subscription__schedule h4 {
     font-size: 12px;
     line-height: 12px;
     padding-top: 30px;
+
+    @media (min-width: @tablet-width) {
+        font-size: 18px;
+        line-height: 20x;
+        padding-top: 34px;
+    }
+
+    @media (min-width: @desktop-width) {
+        padding-top: 58px;
+    }
 }
 
 .subscription__time {
     margin: 20px 0;
     color: #E65C7B;
+
+    @media (min-width: @tablet-width) {
+        margin: 14px 0 18px;
+    }
+
+    @media (min-width: @desktop-width) {
+        margin: 19px 0 26px;
+    }
 }
 
 .subscription__price {
@@ -79,6 +169,15 @@
     line-height: 20px;
     font-weight: bold;
     margin: 0 0 25px 0;
+
+    @media (min-width: @tablet-width) {
+        font-size: 21px;
+        margin-bottom: 30px;
+    }
+
+    @media (min-width: @desktop-width) {
+        font-size: 30px;
+    }
 }
 
 .subscription__btn {
@@ -89,6 +188,18 @@
     line-height: 10px;
     padding: 12px 20px;
     margin-bottom: 30px;
+
+    @media (min-width: @tablet-width) {
+        display: none;
+        margin: 0 auto;
+    }
+
+    @media (min-width: @desktop-width) {
+        width: 223px;
+        padding: 16px;
+        margin-top: 50px;
+        line-height: 20px;
+    }
 }
 
 .subscription__decoration {
@@ -101,4 +212,31 @@
     bottom: -108px;
     left: 13px;
     z-index: -1;
+}
+
+.subscription__unlimited .subscription__btn {
+
+    @media (min-width: @tablet-width) {
+        display: block;
+    }
+}
+
+.subscription__morning:hover .subscription__btn,
+.subscription__evening:hover .subscription__btn {
+
+    @media (min-width: @tablet-width) {
+        display: block;
+    }
+}
+
+.subscription__morning:hover,
+.subscription__evening:hover {
+
+    @media (min-width: @tablet-width) {
+        height: 222px;
+    }
+
+    @media (min-width: @desktop-width) {
+        height: 331px;
+    }
 }
