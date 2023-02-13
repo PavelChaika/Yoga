@@ -3,6 +3,19 @@
 
     background: url(../img/team_back.png) no-repeat;
     background-position: 0 -14px;
+
+    @media (min-width: @tablet-width) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-top: 129px;
+        padding: 0 67px 0 92px;
+    }
+
+    @media (min-width: @desktop-width) {
+        margin-top: 0;
+        padding: 0 232px 0 255px;
+    }
 }
 
 .team__title {
@@ -10,16 +23,40 @@
     line-height: 20px;
     text-align: center;
     margin-bottom: 40px;
+
+    @media (min-width: @tablet-width) {
+        width: 700px;
+        margin: 0 auto 76px;
+        font-size: 21px;
+    }
+    @media (min-width: @desktop-width) {
+        width: 225px;
+        margin: 0 0 120px 330px;
+        font-size: 30px;
+    }
 }
 
-// .team__item {
-//     // width: 228px;
-//     margin: 0 auto;
-// }
+.team__item {
+    display: flex;
+    justify-content: space-between;
+
+    @media (min-width: @desktop-width) {
+        font-size: 12px;
+        line-height: 20px;
+    }
+}
 
 .team__item:nth-child(2),
 .team__item:nth-child(3) {
     display: none;
+
+    @media (min-width: @tablet-width) {
+        display: flex;
+    }
+
+    // @media (min-width: @desktop-width) {
+    //     font-size: 30px;
+    // }
 }
 
 .team__card {
@@ -27,39 +64,180 @@
     justify-content: space-between;
     width: 228px;
     margin: 0 0 25px 0;
+
+    position: relative;
+
+    @media (min-width: @tablet-width) {
+        display: block;
+        width: auto;
+        margin-bottom: 57px;
+    }
+
+    @media (min-width: @desktop-width) {
+        margin-bottom: 89px;
+    }
 }
 
-.team__member {
-    width: 146px;
-    padding-left: 15px;
-    box-shadow: 0px 4px 25px 0px rgba(142,128,169,.25);
-    // display: flex;
+.team__item:nth-child(3) .team__card {
+
+    @media (min-width: @tablet-width) {
+        margin-bottom: 0;
+    }
 }
 
-.team__member-name {
-    margin: 14px 20px 10px 0;
-    color: #E65C7B;
+.team__pic {
 
+    @media (min-width: @tablet-width) {
+        position: absolute;
+        bottom: 10px;
+        left: -14px;
+    }
+
+    @media (min-width: @desktop-width) {
+        bottom: 17px;
+        left: -23px;
+    }
 }
 
-.team__member-type {
-    margin: 0;
+.team__pic img {
+    display: block;
+
+    @media (min-width: @tablet-width) {
+        width: 91px;
+        height: 92px;
+    }
+
+    @media (min-width: @desktop-width) {
+        width: 143px;
+        height: 144px;
+    }
 }
 
 .team__view {
     display: none;
+
+    @media (min-width: @tablet-width) {
+        display: block;
+        position: absolute;
+        bottom: 10px;
+        right: 14px;
+    }
+
+    @media (min-width: @desktop-width) {
+        bottom: 20px;
+        right: 26px;
+    }
+}
+
+.team__information {
+
+    @media (min-width: @tablet-width) {
+        width: 311px;
+    }
+
+    @media (min-width: @desktop-width) {
+        width: 487px;
+        margin-top: -46px;
+    }
+}
+
+.team__instructor {
+    display: none;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 700;
+    margin: 0;
+
+    @media (min-width: @tablet-width) {
+        display: block;
+        margin-bottom: 7px;
+    }
+
+    @media (min-width: @desktop-width) {
+        font-size: 18px;
+        margin: 0 0 42px -20px;
+    }
 }
 
 .team__exp {
     color: #E65C7B;
     margin: 0 0 20px 46px;
+
+    @media (min-width: @tablet-width) {
+        font-size: 12px;
+        margin: 0 0 15px;
+    }
+
+    @media (min-width: @desktop-width) {
+        font-size: 14px;
+        line-height: 20px;
+        margin-bottom: 24px;
+    }
 }
 
 .team__inf {
     width: 228px;
     margin: 0 auto;
+
+    @media (min-width: @tablet-width) {
+        margin: 0;
+        width: auto;
+    }
+
+    @media (min-width: @desktop-width) {
+        font-size: 12px;
+    }
 }
 
 .team__inf li {
     margin-bottom: 6px;
+
+    @media (min-width: @tablet-width) {
+        margin-bottom: 14px;
+        padding-right: 2px;
+    }
+
+    @media (min-width: @desktop-width) {
+        padding: 0;
+        margin-bottom: 28px;
+        line-height: 20px;
+    }
+}
+
+.team__inf-hidden {
+    display: none;
+
+    @media (min-width: @tablet-width) {
+        display: inline;
+    }
+}
+
+.team__inf-hidden--tablet {
+    display: none;
+
+    @media (min-width: @tablet-width) {
+        display: inline;
+    }
+
+    @media (min-width: @desktop-width) {
+        display: none;
+    }
+}
+
+.team__inf-hidden--desktop {
+    display: none;
+
+    @media (min-width: @desktop-width) {
+        display: inline;
+    }
+}
+
+.team__btn {
+    display: none;
+
+    @media (min-width: @tablet-width) {
+        display: flex;
+        margin: 28px 0 0;
+        float: right;
+    }
 }

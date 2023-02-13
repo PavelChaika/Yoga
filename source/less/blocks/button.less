@@ -1,8 +1,3 @@
-.button {
-    display: flex;
-    justify-content: space-between;
-}
-
 .button__back {
     margin-left: 15px;
 }
@@ -18,6 +13,10 @@
     height: 31px;
     border: 1px solid @main-color;
     position: relative;
+
+    @media (min-width: @tablet-width) {
+        display: none;
+    }
 }
 
 .button__forward {
