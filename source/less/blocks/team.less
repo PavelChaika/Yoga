@@ -9,12 +9,18 @@
         flex-wrap: wrap;
         justify-content: space-between;
         margin-top: 129px;
-        padding: 0 67px 0 92px;
+        padding: 0 67px 138px 92px;
+
+        background: url(../img/team_back-tablet.png) no-repeat;
+        background-position: 0 -2px;
     }
 
     @media (min-width: @desktop-width) {
         margin-top: 0;
         padding: 0 232px 0 255px;
+
+        background: url(../img/team_back-desktopp.png) no-repeat;
+        background-position: 810px 0px;
     }
 }
 
@@ -53,10 +59,6 @@
     @media (min-width: @tablet-width) {
         display: flex;
     }
-
-    // @media (min-width: @desktop-width) {
-    //     font-size: 30px;
-    // }
 }
 
 .team__card {
@@ -236,8 +238,94 @@
     display: none;
 
     @media (min-width: @tablet-width) {
+        width: 108px;
         display: flex;
+        justify-content: space-between;
         margin: 28px 0 0;
         float: right;
     }
+
+    @media (min-width: @desktop-width) {
+        width: 156px;
+    }
+}
+
+.team__btn p {
+    margin: 0;
+
+    @media (min-width: @tablet-width) {
+        font-size: 12px;
+        line-height: 20px;
+    }
+
+    @media (min-width: @desktop-width) {
+        font-size: 16px;
+        line-height: 30px;
+    }
+}
+
+
+.team__btn-back,
+.team__btn-forward {
+    width: 31px;
+    height: 16px;
+    border: 1px solid @main-color;
+    position: relative;
+
+    @media (min-width: @tablet-width) {
+        width: 28px;
+        height: 20px;
+    }
+
+    @media (min-width: @desktop-width) {
+        width: 45px;
+        height: 30px;
+    }
+}
+
+.team__btn-forward {
+    background-color: @main-color;
+}
+
+.team__btn button:focus,
+.team__btn button:hover {
+    background-color: @main-color;
+}
+
+.team__btn-back::before,
+.team__btn-forward::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    position: absolute;
+    top: 4px;
+    left: 11px;
+    border: 1px solid @main-color;
+    border-top: none;
+    border-right: none;
+    transform: rotate(45deg);
+
+    @media (min-width: @tablet-width) {
+        width: 8px;
+        height: 8px;
+        top: 5px;
+        left: 9px;
+    }
+
+    @media (min-width: @desktop-width) {
+        width: 10px;
+        height: 10px;
+        top: 8px;
+        left: 14px;
+    }
+}
+
+.team__btn-forward::before {
+    transform: rotate(225deg);
+    border-color: #fff;
+}
+
+.team__btn-back:focus::before,
+.team__btn-back:hover::before {
+    border-color: #fff;
 }

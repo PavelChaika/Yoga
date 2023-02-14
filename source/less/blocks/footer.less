@@ -3,7 +3,7 @@
     color: #fff;
     font-size: 12px;
     line-height: 20px;
-    padding: 50px 0 0 35px;
+    position: relative;
 }
 
 .footer h4 {
@@ -12,6 +12,52 @@
     font-weight: 400;
 }
 
+.footer__list {
+    margin: 50px 0 0 35px;
+
+    @media (min-width: @tablet-width) {
+        width: 336px;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 74px 0 0 76px;
+    }
+
+    @media (min-width: @desktop-width) {
+        position: absolute;
+        color: @main-color;
+        top: 0px;
+        left: 0px;
+        margin: 171px 0 0 274px;
+    }
+}
+
 .footer__list li {
     margin-bottom: 20px;
+
+    @media (min-width: @tablet-width) {
+        margin-bottom: 33px;
+    }
+}
+
+.footer__address {
+
+    @media (min-width: @tablet-width) {
+        margin-right: 61px;
+    }
+}
+
+
+.footer__schedule {
+
+    @media (min-width: @tablet-width) {
+        order: 1;
+        margin-right: 80px;
+    }
+}
+
+.footer_mail {
+
+    @media (min-width: @tablet-width) {
+        order: 1;
+    }
 }

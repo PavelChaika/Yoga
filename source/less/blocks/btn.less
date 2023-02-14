@@ -6,10 +6,12 @@
 
     @media (min-width: @tablet-width) {
         width: 108px;
+        margin-top: 39px;
     }
 
     @media (min-width: @desktop-width) {
-        width: 156px;
+        position: relative;
+        margin: 0;
     }
 }
 
@@ -22,8 +24,7 @@
     }
 
     @media (min-width: @desktop-width) {
-        font-size: 16px;
-        line-height: 30px;
+        display: none;
     }
 }
 
@@ -42,11 +43,24 @@
     @media (min-width: @desktop-width) {
         width: 45px;
         height: 30px;
+        position: absolute;
+        top: -173px;
+    }
+}
+
+.btn__back {
+
+    @media (min-width: @desktop-width) {
+        left: -18px;
     }
 }
 
 .btn__forward {
     background-color: @main-color;
+
+    @media (min-width: @desktop-width) {
+        left: 880px;
+    }
 }
 
 .btn button:focus,
@@ -70,6 +84,7 @@
     @media (min-width: @tablet-width) {
         width: 8px;
         height: 8px;
+        top: 5px;
         left: 9px;
     }
 

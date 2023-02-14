@@ -1,0 +1,67 @@
+.number {
+    display: none;
+
+    @media (min-width: @tablet-width) {
+        display: block;
+        position: absolute;
+        color: @main-color;
+        font-size: 18px;
+        font-weight: 700;
+        top: 192px;
+        right: 26px;
+        opacity: 0.5;
+    }
+
+    @media (min-width: @desktop-width) {
+        font-size: 30px;
+        top: 370px;
+        right: 60px;
+    }
+}
+
+.number::after {
+    content: "";
+    width: 18px;
+    height: 1px;
+    position: absolute;
+    background-color: @main-color;
+    top: 8px;
+    left: 28px;
+
+    @media (min-width: @desktop-width) {
+        width: 50px;
+        left: 43px;
+    }
+}
+
+.number:nth-of-type(2) {
+    top: 600px;
+
+    @media (min-width: @desktop-width) {
+        top: 1000px;
+    }
+}
+
+.number:nth-of-type(3) {
+    top: 1062px;
+
+    @media (min-width: @desktop-width) {
+        top: 1650px;
+    }
+}
+
+.number:nth-of-type(4) {
+    top: 1570px;
+
+    @media (min-width: @desktop-width) {
+        top: 2380px;
+    }
+}
+
+.number:nth-of-type(5) {
+    top: 2346px;
+
+    @media (min-width: @desktop-width) {
+        top: 3060px;
+    }
+}
