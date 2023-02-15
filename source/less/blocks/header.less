@@ -1,14 +1,20 @@
 .header {
+    max-width: 290px;
     display: flex;
     justify-content: space-between;
-    margin: 0 15px -38px;
+    margin: 0 auto -40px;
+    padding-top: 23px;
 
     @media (min-width: @tablet-width) {
-        margin: 0 80px -40px;
+        max-width: 608px;
+        margin: 0 auto -50px;
+        padding-top: 33px;
     }
 
     @media (min-width: @desktop-width) {
-        margin: 0 140px -84px;
+        max-width: 1160px;
+        margin: 0 auto -83px;
+        padding-top: 66px;
         font-size: 16px;
     }
 }

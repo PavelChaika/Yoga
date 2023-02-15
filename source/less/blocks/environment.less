@@ -1,0 +1,80 @@
+.environment {
+    display: none;
+
+    @media (min-width: @tablet-width) {
+        max-width: 628px;
+        display: flex;
+        // display: none;
+        justify-content: space-between;
+        margin: 0 auto;
+        padding-bottom: 106px;
+
+    }
+
+    @media (min-width: @desktop-width) {
+        max-width: 1160px;
+        display: flex;
+        // display: none;
+        justify-content: space-between;
+        margin: 0 auto;
+        padding-bottom: 174px;
+    }
+}
+
+
+.environment__list {
+    width: 31px;
+    display: flex;
+    justify-content: space-between;
+
+    @media (min-width: @desktop-width) {
+        width: 57px;
+    }
+}
+
+.environment__list path {
+    fill: @main-color;
+}
+
+.environment__item a {
+    display: block;
+}
+
+.environment__item:nth-of-type(1) svg {
+    width: 7px;
+    height: 4px;
+
+    @media (min-width: @desktop-width) {
+        width: 13px;
+        height: 8px;
+    }
+}
+
+.environment__item:nth-of-type(2) svg {
+    width: 8px;
+    height: 5px;
+
+    @media (min-width: @desktop-width) {
+        width: 15px;
+        height: 10px;
+    }
+}
+
+.environment__item:nth-of-type(3) svg {
+    width: 3px;
+    height: 6px;
+
+    @media (min-width: @desktop-width) {
+        width: 5px;
+        height: 11px;
+    }
+}
+
+.environment p {
+    margin: 0;
+    font-size: 12px;
+
+    @media (min-width: @desktop-width) {
+        font-size: 16px;
+    }
+}

@@ -1,16 +1,15 @@
 .head {
-    height: 336px;
+    max-width: 320px;
+    margin: 0 auto;
     background-image: url(../img/yoga.png);
 
     @media (min-width: @tablet-width) {
-        width: 768px;
-        height: 484px;
+        max-width: 768px;
         background: url(../img/yoga_tablet.png) no-repeat;
     }
 
     @media (min-width: @desktop-width) {
-        width: 1447px;
-        height: 908px;
+        max-width: 1440px;
         background: url(../img/yoga_desktop.png) no-repeat;
     }
 }
@@ -63,12 +62,17 @@
     color: #E65C7B;
     display: flex;
     justify-content: space-between;
-    text-align: right;
     text-align: left;
     line-height: 12px;
     text-decoration: none;
+    padding-bottom: 91px;
+
+    @media (min-width: @tablet-width) {
+        padding-bottom: 57px;
+    }
 
     @media (min-width: @desktop-width) {
+        padding-bottom: 131px;
         font-size: 14px;
         width: 260px;
     }
