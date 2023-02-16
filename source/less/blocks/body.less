@@ -1,3 +1,17 @@
 .body {
     min-width: 320px;
 }
+
+.body__container {
+    max-width: @desktop-lg-width;
+    margin: 0 auto;
+    padding: 0 35px;
+
+    @media (min-width: @tablet-width) {
+        padding: 0 78px;
+    }
+
+    @media (min-width: @desktop-lg-width) {
+        padding: 0 140px;
+    }
+}
