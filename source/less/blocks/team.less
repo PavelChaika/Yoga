@@ -1,5 +1,6 @@
 .team {
-    margin: 70px 0 0 0;
+    position: relative;
+    // margin: 70px 0 0 0;
 
     background: url(../img/team_back.png) no-repeat;
     background-position: 0 -14px;
@@ -8,7 +9,6 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        margin-top: 129px;
         padding: 0 67px 138px 92px;
 
         background: url(../img/team_back-tablet.png) no-repeat;
@@ -21,6 +21,16 @@
 
         background: url(../img/team_back-desktopp.png) no-repeat;
         background-position: 810px 0px;
+    }
+}
+
+.team__number {
+    @media (min-width: @tablet-width) {
+        top: 164px;
+    }
+
+    @media (min-width: @desktop-width) {
+        top: 424px;
     }
 }
 
@@ -43,8 +53,9 @@
 }
 
 .team__item {
-    display: flex;
-    justify-content: space-between;
+    // display: flex;
+    // justify-content: space-between;
+    // width: 100%;
 
     @media (min-width: @desktop-width) {
         font-size: 12px;
@@ -64,8 +75,9 @@
 .team__card {
     display: flex;
     justify-content: space-between;
-    width: 228px;
-    margin: 0 0 25px 0;
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 25px;
 
     position: relative;
 
@@ -88,6 +100,7 @@
 }
 
 .team__pic {
+    width: 36%;
 
     @media (min-width: @tablet-width) {
         position: absolute;
@@ -103,6 +116,7 @@
 
 .team__pic img {
     display: block;
+    width: 100%;
 
     @media (min-width: @tablet-width) {
         width: 91px;
@@ -163,7 +177,7 @@
 
 .team__exp {
     color: #E65C7B;
-    margin: 0 0 20px 46px;
+    margin-bottom: 20px;
 
     @media (min-width: @tablet-width) {
         font-size: 12px;
@@ -178,7 +192,6 @@
 }
 
 .team__inf {
-    width: 228px;
     margin: 0 auto;
 
     @media (min-width: @tablet-width) {

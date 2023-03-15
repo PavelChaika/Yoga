@@ -1,4 +1,5 @@
 .header {
+    position: relative;
     background-image: url(../img/yoga.png);
     background-size: cover;
     background-position: center;
@@ -12,6 +13,19 @@
         background-image: url(../img/yoga_desktop.png);
     }
 }
+
+
+.header__number {
+
+    @media (min-width: @tablet-width) {
+        top: 280px;
+    }
+
+    @media (min-width: @desktop-width) {
+        top: 424px;
+    }
+}
+
 
 .header__container {
     padding-top: 20px;
