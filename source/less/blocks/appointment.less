@@ -1,15 +1,18 @@
 .appointment {
-    background: url(../img/appointment_back.png) no-repeat;
+    background-image: url(../img/appointment_back.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     padding-bottom: 71px;
 
     @media (min-width: @tablet-width) {
-        background: url(../img/appointment_back-tablet.png) no-repeat;
-        background-position: 0 0px;
-        padding-bottom: 66px;
+        background-image: url(../img/appointment_back-tablet.png);
+        // background-position: 0 0px;
+        // padding-bottom: 66px;
     }
 
     @media (min-width: @desktop-width) {
-        background: url(../img/appointment_back-desktop.png) no-repeat;
+        background-image: url(../img/appointment_back-desktop.png);
     }
 }
 
