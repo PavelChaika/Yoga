@@ -4,15 +4,22 @@
 
     @media (min-width: @tablet-width) {
         margin: 0;
+        padding-bottom: 148px;
     }
 
     @media (min-width: @desktop-width) {
-        width: 905px;
+        
+        // margin: 0 auto;
+        // z-index: 1;
+    }
+}
+
+.review .body__container {
+    @media (min-width: @desktop-width) {
+        padding: 0 268px;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        margin: 141px auto 147px;
-        // z-index: 1;
     }
 }
 
@@ -22,7 +29,7 @@
     }
 
     @media (min-width: @desktop-width) {
-        top: 424px;
+        top: 230px;
     }
 }
 
@@ -40,7 +47,7 @@
     @media (min-width: @desktop-width) {
         font-size: 30px;
         line-height: 15px;
-        width: 905px;
+        width: 100%;
         margin: 0 auto 62px;
     }
 }

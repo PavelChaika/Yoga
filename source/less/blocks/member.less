@@ -13,7 +13,7 @@
 
         display: grid;
         // gap: 8px;
-        grid-template-columns: 64% auto;
+        grid-template-columns: 64% 30%;
         grid-template-rows: 54% auto;
         // grid-template-areas:
         // "elem1 elem2"
@@ -23,7 +23,7 @@
 
     @media (min-width: @desktop-width) {
         // width: 399px;
-        padding-left: 141px;
+        padding-left: 35%;
         justify-content: space-between;
     }
 }
@@ -34,6 +34,10 @@
         margin-top: 10px;
         display: block;
         // width: 44%;
+    }
+
+    @media (min-width: @desktop-width) {
+        margin: 0;
     }
 }
 
@@ -104,6 +108,6 @@
     }
 
     @media (min-width: @desktop-width) {
-        margin-bottom: 17px;
+        // margin-bottom: 17px;
     }
 }

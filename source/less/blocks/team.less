@@ -1,12 +1,9 @@
 .team {
     position: relative;
-    // margin: 70px 0 0 0;
-
     background: url(../img/team_back.png) no-repeat;
     background-position: 0 -14px;
 
     @media (min-width: @tablet-width) {
-        // padding: 0 67px 138px 92px;
         padding-bottom: 137px;
 
         background: url(../img/team_back-tablet.png) no-repeat;
@@ -14,11 +11,16 @@
     }
 
     @media (min-width: @desktop-width) {
-        margin-top: 0;
-        padding: 0 232px 0 255px;
-
         background: url(../img/team_back-desktopp.png) no-repeat;
         background-position: 810px 0px;
+        padding-bottom: 141px;
+    }
+}
+
+.team .body__container {
+
+    @media (min-width: @desktop-width) {
+        padding: 0 232px;
     }
 }
 
@@ -28,7 +30,7 @@
     }
 
     @media (min-width: @desktop-width) {
-        top: 424px;
+        top: 340px;
     }
 }
 
@@ -278,6 +280,7 @@
 
     @media (min-width: @desktop-width) {
         width: 156px;
+        margin-top: 44px;
     }
 }
 
