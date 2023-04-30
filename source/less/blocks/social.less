@@ -1,13 +1,3 @@
-.social {
-
-    @media (min-width: @desktop-width) {
-        position: absolute;
-        top: 0px;
-        left: 0px;
-        padding: 22% 0 0 19%;
-    }
-}
-
 .social__list {
     display: flex;
     margin-bottom: 20px;
@@ -27,8 +17,15 @@
     }
 }
 
-.social__item a {
+.social__link {
     display: block;
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        inset: -8px -5px -8px -5px;
+    }
 }
 
 .social__item:nth-child(1) svg {
@@ -59,5 +56,6 @@
 
     @media (min-width: @desktop-width) {
         fill: @main-color;
+        fill: black;
     }
 }
