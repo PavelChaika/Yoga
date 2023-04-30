@@ -52,6 +52,15 @@
     }
 }
 
+.team__slider {
+    position: relative;
+    padding: 0 11px;
+}
+
+.team__slider-thumbs {
+    padding: 0 11px;
+}
+
 .team__list {
     width: 100%;
     padding-left: 14px;
@@ -294,10 +303,12 @@
 
 .team__btn-back,
 .team__btn-forward {
-    width: 31px;
-    height: 16px;
+    width: 16px !important;
+    height: 31px !important;
     border: 1px solid @main-color;
-    position: relative;
+    position: absolute;
+    top: 25px !important;
+    margin: 0 !important;
 
     @media (min-width: @tablet-width) {
         width: 28px;
@@ -310,8 +321,12 @@
     }
 }
 
+.team__btn-back {
+    left: -20px !important;
+}
+
 .team__btn-forward {
-    background-color: @main-color;
+    right: -20px !important;
 }
 
 .team__btn button:focus,
@@ -325,12 +340,11 @@
     width: 6px;
     height: 6px;
     position: absolute;
-    top: 4px;
-    left: 11px;
+    top: 50%;
+    left: 50%;
     border: 1px solid @main-color;
     border-top: none;
     border-right: none;
-    transform: rotate(45deg);
 
     @media (min-width: @tablet-width) {
         width: 8px;
@@ -347,12 +361,15 @@
     }
 }
 
-.team__btn-forward::before {
-    transform: rotate(225deg);
-    border-color: #fff;
+.team__btn-back::after,
+.team__btn-forward::after {
+    display: none;
 }
 
-.team__btn-back:focus::before,
-.team__btn-back:hover::before {
-    border-color: #fff;
+.team__btn-back::before {
+    transform: translate(-50%, -50%) translateX(1px) rotate(45deg);
+}
+
+.team__btn-forward::before {
+    transform: translate(-50%, -50%) translateX(-1px) rotate(225deg);
 }
