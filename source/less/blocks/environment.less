@@ -9,17 +9,20 @@
 
 
 .environment__list {
-    width: 31px;
     display: flex;
     justify-content: space-between;
-
-    @media (min-width: @desktop-width) {
-        width: 57px;
-    }
 }
 
 .environment__list path {
     fill: @main-color;
+}
+
+.environment__item {
+    margin-right: 8px;
+
+    @media (min-width: @desktop-width) {
+        margin-right: 14px;
+    }
 }
 
 .environment__item a {
@@ -54,6 +57,16 @@
         width: 5px;
         height: 11px;
     }
+}
+
+.environment__link {
+    position: relative;
+}
+
+.environment__link::after {
+    content: "";
+    position: absolute;
+    inset: -8px -5px -8px -5px;
 }
 
 .environment p {

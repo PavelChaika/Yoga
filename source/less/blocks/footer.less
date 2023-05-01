@@ -4,27 +4,60 @@
     font-size: 12px;
     line-height: 20px;
     position: relative;
-}
+    padding-bottom: 50px;
 
-.footer__container {
-    padding: 50px 35px 40px;
+    @media (min-width: @tablet-width) {
+        padding-bottom: 75px;
+    }
 
     @media (min-width: @desktop-width) {
-        padding: 0;
+        padding-bottom: 25px;
     }
 }
 
-.footer h4 {
-    font-size: 14px;
-    line-height: 20px;
-    font-weight: 400;
+.footer__wallpaper {
+
+    @media (min-width: @desktop-width) {
+        background-image: url(../img/appointment_back-desktop.png);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+}
+
+.footer__wrapper {
+
+    @media (min-width: @desktop-width) {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        padding: 0 140px;
+        max-width: 1160px;
+        margin: 0 auto;
+    }
+}
+
+.footer__container {
+    padding-top: 50px;
+    padding-bottom: 40px;
+
+    @media (min-width: @tablet-width) {
+        padding-top: 75px;
+        padding-bottom: 20px;
+    }
+
+    @media (min-width: @desktop-width) {
+        padding: 0;
+        margin: 0;
+        padding-top: 170px;
+    }
 }
 
 .footer__list {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    color: black !important;
+    // color: black !important;
 
     @media (min-width: @tablet-width) {
         display: grid;
@@ -40,9 +73,16 @@
     }
 }
 
+.footer__list h2 {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+}
+
 .footer__list li {
     margin-bottom: 20px;
     min-width: 150px;
+    padding-right: 10px;
 
     @media (min-width: @tablet-width) {
         margin: 0;
@@ -51,6 +91,7 @@
 
 .footer__appointment {
     padding-bottom: 70px;
+
 }
 
 .footer__address {

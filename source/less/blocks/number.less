@@ -2,18 +2,18 @@
     display: none;
 
     @media (min-width: @tablet-width) {
-        display: block;
+        display: flex;
         position: absolute;
         color: @main-color;
         font-size: 18px;
         font-weight: 700;
         opacity: 0.5;
-        right: 30px;
+        right: 0px;
+        align-items: center;
     }
 
     @media (min-width: @desktop-width) {
         font-size: 30px;
-        right: 25px;
     }
 }
 
@@ -21,19 +21,16 @@
     content: "";
     width: 18px;
     height: 1px;
-    position: absolute;
     background-color: @main-color;
-    top: 6px;
-    left: 34px;
-
-    @media (min-width: @desktop-width) {
-        width: 50px;
-        left: 43px;
+    left: 0px;
+    
+    @media (min-width: @tablet-width) {
+        width: 20px;
+        margin-left: 10px;
     }
 
     @media (min-width: @desktop-width) {
-        width: 26px;
-        // left: 40px;
-        left: 0;
+        width: 40px;
+        margin-left: 20px;
     }
 }

@@ -30,10 +30,12 @@
 
 .btn__back,
 .btn__forward {
-    width: 31px;
-    height: 16px;
+    width: 31px !important;
+    height: 16px !important;
     border: 1px solid @main-color;
-    position: relative;
+    position: relative !important;
+    margin: 0 !important;
+    left: 0 !important;
 
     @media (min-width: @tablet-width) {
         width: 28px;
@@ -57,10 +59,6 @@
 
 .btn__forward {
     background-color: @main-color;
-
-    @media (min-width: @desktop-width) {
-        // left: 880px;
-    }
 }
 
 .btn button:focus,
@@ -74,30 +72,31 @@
     width: 6px;
     height: 6px;
     position: absolute;
-    top: 4px;
-    left: 11px;
+    top: 50%;
+    left: 50%;
     border: 1px solid @main-color;
     border-top: none;
     border-right: none;
-    transform: rotate(45deg);
+    transform: translate(-50%, -50%) rotate(45deg);
 
     @media (min-width: @tablet-width) {
         width: 8px;
         height: 8px;
-        top: 5px;
-        left: 9px;
     }
 
     @media (min-width: @desktop-width) {
         width: 10px;
         height: 10px;
-        top: 8px;
-        left: 14px;
     }
 }
 
+.btn__back::after,
+.btn__forward::after {
+    display: none;
+} 
+
 .btn__forward::before {
-    transform: rotate(225deg);
+    transform: translate(-50%, -50%) rotate(225deg);
     border-color: #fff;
 }
 
