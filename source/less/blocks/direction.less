@@ -14,7 +14,6 @@
     @media (min-width: @desktop-width) {
         background: url(../img/direction_back-desktop.png) no-repeat;
         background-position: 126px -80px;
-        // padding-bottom: 16px;
     }
 }
 
@@ -27,10 +26,6 @@
         top: 310px;
     }
 }
-
-// .direction__wrapper {
-//     position: relative;
-// }
 
 .direction__title {
     text-align: center;
@@ -53,7 +48,6 @@
         display: grid;
         gap: 24px;
         grid-template-columns: 40% auto;
-        // grid-template-rows: 121px;
         grid-template-rows: auto;
         grid-template-areas: "elem1 elem2"
                              "elem1 elem3"
@@ -141,18 +135,12 @@
 }
 
 .direction__container {
-    // display: flex;
     position: relative;
     box-shadow: 0px 4px 25px 0px rgba(142,128,169,.25);
     padding: 20px 60px 20px 20px;    
 
     @media (min-width: @tablet-width) {
-        // padding: 24px 42px 0 20px;
         flex-grow: 1;
-    }
-
-    @media (min-width: @desktop-width) {
-        // padding: 44px 70px 0 46px;
     }
 }
 
@@ -203,13 +191,11 @@
 }
 
 .direction__instructor {
-    // margin: 0 0 11px 0;
     color: #E65C7B;
     line-height: 14px;
 
     @media (min-width: @desktop-width) {
         font-size: 12px;
-        // margin-bottom: 24px;
     }
 }
 
@@ -225,10 +211,6 @@
     top: 0;
     right: 0;
     bottom: 0;
-
-    @media (min-width: @desktop-width) {
-        // width: 64px;
-    }
 }
 
 .direction__item:not(:nth-child(1)) .direction__btn {
@@ -248,9 +230,6 @@
     content: "";
     width: 10px;
     height: 10px;
-    // position: absolute;
-    // top: 55px;
-    // left: 15px;
     transform: rotate(45deg);
     border: 1px solid #fff;
     border-bottom: none;
@@ -259,7 +238,5 @@
     @media (min-width: @desktop-width) {
         width: 16px;
         height: 16px;
-        // top: 86px;
-        // left: 20px;
     }
 }
