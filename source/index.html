@@ -632,18 +632,11 @@
                                 </div>
                             </div>
                         </div>
-
-                        <!-- If we need pagination -->
-                        <div class="swiper-pagination"></div>
-
-                        <!-- If we need navigation buttons -->
-                        <div class="swiper-button-prev team__btn-back"></div>
-                        <div class="swiper-button-next team__btn-forward"></div>
                     </div>
 
                     <!-- Slider main container -->
-                    <div class="team__slider-thumbs">
-                        <div class="swiper j-team-slider-thumbs">
+                    <div class="team__slider-thumbs j-team-slider-thumbs">
+                        <div class="swiper">
                             <!-- Additional required wrapper -->
                             <div class="swiper-wrapper">
                                 <!-- Slides -->
@@ -651,7 +644,7 @@
                                     <div class="team__information">
                                         <p class="team__instructor">Серёжа Попов</p>
                                         <p class="team__exp">
-                                            Опыт преподавания: 8 лет
+                                            Опыт преподавания: 228 лет
                                         </p>
                                         <ul class="team__inf">
                                             <li>
@@ -697,7 +690,7 @@
                                     <div class="team__information">
                                         <p class="team__instructor">Серёжа Попов</p>
                                         <p class="team__exp">
-                                            Опыт преподавания: 8 лет
+                                            Опыт преподавания: 668 лет
                                         </p>
                                         <ul class="team__inf">
                                             <li>
@@ -743,7 +736,7 @@
                                     <div class="team__information">
                                         <p class="team__instructor">Серёжа Попов</p>
                                         <p class="team__exp">
-                                            Опыт преподавания: 8 лет
+                                            Опыт преподавания: 83523 лет
                                         </p>
                                         <ul class="team__inf">
                                             <li>
@@ -789,7 +782,7 @@
                                     <div class="team__information">
                                         <p class="team__instructor">Серёжа Попов</p>
                                         <p class="team__exp">
-                                            Опыт преподавания: 8 лет
+                                            Опыт преподавания: 833333 лет
                                         </p>
                                         <ul class="team__inf">
                                             <li>
@@ -879,6 +872,12 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+
+                    <div class="team__controls j-team-controls">
+                        <div class="swiper-button-prev team__btn-back"></div>
+                        <div class="swiper-pagination team__pagination"></div>
+                        <div class="swiper-button-next team__btn-forward"></div>
                     </div>
                 </div>
             </div>
@@ -1345,23 +1344,40 @@
 
         // Team slider
         const teamSwiperContainer = document.querySelector(".j-team-slider .swiper");
-        const teamSwiperThumbsContainer = document.querySelector(".j-team-slider-thumbs");
+        const teamSwiperThumbsContainer = document.querySelector(".j-team-slider-thumbs .swiper");
 
         const teamSwiperThumbs = new Swiper(teamSwiperThumbsContainer, {
             speed: 200,
             spaceBetween: 16,
+            breakpoints: {
+                768: {
+                    direction: 'vertical',
+                    spaceBetween: 20
+                }
+            }
         });
 
         const teamSwiper = new Swiper(teamSwiperContainer, {
             speed: 200,
             spaceBetween: 16,
             navigation: {// Buttons
-                nextEl: '.j-team-slider .swiper-button-next',
-                prevEl: '.j-team-slider .swiper-button-prev',
+                nextEl: '.j-team-controls .swiper-button-next',
+                prevEl: '.j-team-controls .swiper-button-prev',
             },
             thumbs: {// Second slides
                 swiper: teamSwiperThumbs
-            }
+            },
+            breakpoints: {
+                768: {
+                    direction: 'vertical',
+                    slidesPerView: 3,
+                    spaceBetween: 20,
+                    pagination: {
+                        el: '.j-team-controls .swiper-pagination',
+                        type: 'fraction',
+                    },
+                }
+            },
         });
 
         // Your pain slider
@@ -1373,7 +1389,23 @@
             navigation: {// Buttons
                 nextEl: '.j-review-slider .swiper-button-next',
                 prevEl: '.j-review-slider .swiper-button-prev',
-            }
+            },
+            // pagination: {
+            //     el: '.j-team-controls .swiper-pagination',
+            //     type: 'fraction',
+            // },
+            // breakpoints: {
+            //     768: {
+            //         direction: 'vertical',
+            //         slidesPerView: 3,
+            //         spaceBetween: 20,
+            //     },
+            //     1024: {
+            //         direction: 'horizontal',
+            //         slidesPerView: 3,
+            //         spaceBetween: 20,
+            //     }
+            // },
         });
     </script>
 </body>
