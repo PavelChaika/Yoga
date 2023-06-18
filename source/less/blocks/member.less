@@ -1,22 +1,14 @@
 .member {
     display: flex;
-    width: 64%;
     padding-left: 15px;
     background-color: #fff;
     box-shadow: 0px 4px 25px 0px rgba(142, 128, 169, .25);
 
     @media (min-width: @tablet-width) {
-        width: 100%;
-        padding-left: 34%;
-
+        padding-left: 100px;
         display: grid;
-        // gap: 8px;
         grid-template-columns: 64% 30%;
         grid-template-rows: 54% auto;
-        // grid-template-areas:
-        // "elem1 elem2"
-        // "elem1 elrem3";
-        // // "elem1 btn";
     }
 
     @media (min-width: @desktop-width) {
