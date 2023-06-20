@@ -17,13 +17,17 @@
     }
 }
 
+.team__wrapper {
+    position: relative;
+}
+
 .team__number {
     @media (min-width: @tablet-width) {
-        top: 224px;
+        // top: 224px;
     }
 
     @media (min-width: @desktop-width) {
-        top: 340px;
+        // top: 340px;
     }
 }
 
@@ -49,7 +53,7 @@
 
     @media (min-width: @tablet-width) {
         display: grid;
-        grid-template-columns: 2fr 3fr;
+        grid-template-columns: 2.5fr 3fr;
         grid-template-rows: 400px auto;
         column-gap: 40px;
     }
@@ -314,26 +318,31 @@
     }
 }
 
-.team__controls {
-    display: flex;
-    margin-top: 28px;
-}
 
 .team__pagination {
     position: relative !important;
     top: 0 !important;
     bottom: 0 !important;
+
+    @media (min-width: @tablet-width) {
+        width: auto !important;
+        font-size: 12px;
+        line-height: 20px;
+    }
 }
 
 .team__btn {
-    display: none;
+    // display: none;
 
     @media (min-width: @tablet-width) {
         width: 108px;
         display: flex;
         justify-content: space-between;
-        margin: 28px 0 0;
+        // margin: 28px 0 0;
         float: right;
+        align-items: center;
+        margin: 0 auto;
+        margin-top: 8px;
     }
 
     @media (min-width: @desktop-width) {
@@ -364,18 +373,19 @@
     border: 1px solid @main-color;
     position: absolute;
     top: 25px !important;
+    // top: 5% !important;
     margin: 0 !important;
 
     @media (min-width: @tablet-width) {
-        width: 28px;
-        height: 20px;
+        width: 28px !important;
+        height: 20px !important;
         position: relative !important;
         top: 0 !important;
     }
 
     @media (min-width: @desktop-width) {
-        width: 45px;
-        height: 30px;
+        width: 45px !important;
+        height: 30px !important;
     }
 }
 
@@ -392,6 +402,7 @@
 
     @media (min-width: @tablet-width) {
         right: 0 !important;
+        background-color: #8E80A9;
     }
 }
 
@@ -415,15 +426,25 @@
     @media (min-width: @tablet-width) {
         width: 8px;
         height: 8px;
-        top: 5px;
-        left: 9px;
+        // top: 5px;
+        // left: 9px;
     }
 
     @media (min-width: @desktop-width) {
         width: 10px;
         height: 10px;
-        top: 8px;
-        left: 14px;
+        // top: 8px;
+        // left: 14px;
+    }
+}
+
+.team__btn-forward::before {
+    border: 1px solid #8E80A9;
+    border-top: none;
+    border-right: none;
+
+    @media (min-width: @tablet-width) {
+        border-color: #fff;
     }
 }
 
