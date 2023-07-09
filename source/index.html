@@ -874,10 +874,10 @@
                         </div>
                     </div>
 
-                    <div class="team__btn j-team-controls">
-                        <div class="swiper-button-prev team__btn-back"></div>
+                    <div class="team__btn-wrap j-team-controls">
+                        <div class="swiper-button-prev team__btn team__btn--back"></div>
                         <div class="swiper-pagination team__pagination"></div>
-                        <div class="swiper-button-next team__btn-forward"></div>
+                        <div class="swiper-button-next team__btn team__btn--forward"></div>
                     </div>
                 </div>
             </div>
@@ -1162,24 +1162,7 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- If we need pagination -->
-                        <!-- <div class="swiper-pagination"></div> -->
-
-                        <!-- If we need navigation buttons -->
-                        <!-- <div class="swiper-button-prev btn__back"></div>
-                    <div class="swiper-button-next btn__forward"></div> -->
-
                     </div>
-
-                    <!-- <div class="review__btn btn"> -->
-                        <!-- <button class="btn__back"></button> -->
-                        <!-- <div class="swiper-button-prev btn__back"></div> -->
-                        <!-- <p> -->
-                            <!-- 1 / 9 -->
-                        <!-- </p> -->
-                        <!-- <button class="btn__forward"></button> -->
-                        <!-- <div class="swiper-button-next btn__forward"></div> -->
-                    <!-- </div> -->
 
                     <div class="review__btn btn j-review-controls">
                         <div class="swiper-button-prev review__btn-back"></div>
@@ -1396,29 +1379,21 @@
                 nextEl: '.j-review-slider .swiper-button-next',
                 prevEl: '.j-review-slider .swiper-button-prev',
             },
+            pagination: {
+                el: '.j-review-controls .swiper-pagination',
+                type: 'fraction',
+            },
             
             breakpoints: {
-                1: {                    
-                    pagination: {
-                        el: '.j-review-controls .swiper-pagination',
-                        type: 'fraction',
-                    },
-                },
-
-
                 768: {
                     direction: 'vertical',
                     slidesPerView: 2,
                     spaceBetween: 18,
-                    // pagination: {
-                    //     el: '.j-review-controls .swiper-pagination',
-                    //     type: 'fraction',
-                    // },
                 },
                 1024: {
                     direction: 'horizontal',
                     slidesPerView: 2,
-                    spaceBetween: 21,
+                    spaceBetween: 40,
                 }
             },
         });

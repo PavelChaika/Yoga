@@ -42,8 +42,7 @@
         font-size: 21px;
     }
     @media (min-width: @desktop-width) {
-        width: 225px;
-        margin: 0 0 120px 330px;
+        margin-bottom: 120px;
         font-size: 30px;
     }
 }
@@ -54,7 +53,7 @@
     @media (min-width: @tablet-width) {
         display: grid;
         grid-template-columns: 2.5fr 3fr;
-        grid-template-rows: 400px auto;
+        grid-template-rows: 460px auto;
         column-gap: 40px;
     }
 }
@@ -69,7 +68,9 @@
     }
     
     .swiper {
-        width: 100%;
+        // width: 100%;
+        padding: 20px;
+        margin: -20px;
 
         @media (min-width: @tablet-width) {
             height: 100%;
@@ -77,9 +78,9 @@
     }
 
     .swiper-slide-active {
-        @media (min-width: @tablet-width) {
-            background-color: #E65C7B;
-        }
+        // @media (min-width: @tablet-width) {
+        //     background-color: #E65C7B;
+        // }
     }
 }
 
@@ -331,14 +332,11 @@
     }
 }
 
-.team__btn {
-    // display: none;
-
+.team__btn-wrap {
     @media (min-width: @tablet-width) {
         width: 108px;
         display: flex;
         justify-content: space-between;
-        // margin: 28px 0 0;
         float: right;
         align-items: center;
         margin: 0 auto;
@@ -351,7 +349,7 @@
     }
 }
 
-.team__btn p {
+.team__btn-wrap p {
     margin: 0;
 
     @media (min-width: @tablet-width) {
@@ -365,16 +363,40 @@
     }
 }
 
-
-.team__btn-back,
-.team__btn-forward {
+.team__btn {
     width: 16px !important;
     height: 31px !important;
     border: 1px solid @main-color;
     position: absolute;
     top: 25px !important;
-    // top: 5% !important;
     margin: 0 !important;
+    background-color: @main-color;
+
+    &::before {
+        content: "";
+        width: 6px;
+        height: 6px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        border: 1px solid #fff;
+        border-top: none;
+        border-right: none;
+
+        @media (min-width: @tablet-width) {
+            width: 8px;
+            height: 8px;
+        }
+
+        @media (min-width: @desktop-width) {
+            width: 10px;
+            height: 10px;
+        }
+    }
+
+    &::after {
+        display: none;
+    }
 
     @media (min-width: @tablet-width) {
         width: 28px !important;
@@ -387,76 +409,37 @@
         width: 45px !important;
         height: 30px !important;
     }
+
+    &.swiper-button-disabled {
+        opacity: 1 !important;
+        background-color: transparent;
+
+        &::before {
+            border-color: @main-color;
+        }
+    }
 }
 
-.team__btn-back {
+.team__btn--back {
     left: -20px !important;
+
+    &::before {
+        transform: translate(-50%, -50%) translateX(1px) rotate(45deg);
+    }
 
     @media (min-width: @tablet-width) {
         left: 0 !important;
     }
 }
 
-.team__btn-forward {
+.team__btn--forward {
     right: -20px !important;
+
+    &::before {
+        transform: translate(-50%, -50%) translateX(-1px) rotate(225deg);
+    }
 
     @media (min-width: @tablet-width) {
         right: 0 !important;
-        background-color: #8E80A9;
     }
-}
-
-.team__btn button:focus,
-.team__btn button:hover {
-    background-color: @main-color;
-}
-
-.team__btn-back::before,
-.team__btn-forward::before {
-    content: "";
-    width: 6px;
-    height: 6px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    border: 1px solid @main-color;
-    border-top: none;
-    border-right: none;
-
-    @media (min-width: @tablet-width) {
-        width: 8px;
-        height: 8px;
-        // top: 5px;
-        // left: 9px;
-    }
-
-    @media (min-width: @desktop-width) {
-        width: 10px;
-        height: 10px;
-        // top: 8px;
-        // left: 14px;
-    }
-}
-
-.team__btn-forward::before {
-    border: 1px solid #8E80A9;
-    border-top: none;
-    border-right: none;
-
-    @media (min-width: @tablet-width) {
-        border-color: #fff;
-    }
-}
-
-.team__btn-back::after,
-.team__btn-forward::after {
-    display: none;
-}
-
-.team__btn-back::before {
-    transform: translate(-50%, -50%) translateX(1px) rotate(45deg);
-}
-
-.team__btn-forward::before {
-    transform: translate(-50%, -50%) translateX(-1px) rotate(225deg);
 }
