@@ -8,9 +8,9 @@
     }
 }
 
-.review__wrapper {
-    position: relative;
-}
+// .review__wrapper {
+//     position: relative;
+// }
 
 .review__number {
     @media (min-width: @tablet-width) {
@@ -43,6 +43,7 @@
 
 .review__slider {
     // height: 658px;
+    position: relative;
 
     .swiper {
         // width: 100%;
@@ -52,8 +53,11 @@
         }
 
         @media (min-width: @desktop-width) {
-            width: 905px;
-            height: 315px;
+            // width: 905px;
+            // width: 100%;
+            height: auto;
+            padding: 26px;
+            margin: -26px;
         }
     }
     .swiper-slide {
@@ -61,14 +65,29 @@
 
         @media (min-width: @tablet-width) {
             // height: 315px;
-            height: 100%;
+            // height: 100%;
+        }
+    }
+
+    .swiper-wrapper {
+    
+        @media (min-width: @tablet-width) {
+            padding-top: 10px;      
+        }
+    
+        @media (min-width: @desktop-width) {
+            padding: 0;
+            // width: calc(100% - 26px);
+            // overflow: hidden;
+            padding: 26px;
+            margin: -26px;
         }
     }
 }
 
 .review__user {
     margin: 0 auto;
-    box-shadow: 0px 4px 25px 0px rgba(142,128,169,.25);
+    box-shadow: 0px 4px 16px 0px rgba(142,128,169,.25);
     position: relative;
 
     background: #fff url(../img/review_quotes.svg);
@@ -84,6 +103,7 @@
 
     @media (min-width: @desktop-width) {
         margin: 0;
+        width: auto;
     }
 }
 
@@ -94,17 +114,6 @@
         
 //     }
 // }
-
-.swiper-wrapper {
-    
-    @media (min-width: @tablet-width) {
-        padding-top: 10px;      
-    }
-
-    @media (min-width: @desktop-width) {
-        padding: 0;
-    }
-}
 
 .review .review__user:nth-of-type(2) {
     display: none;
@@ -119,7 +128,8 @@
     margin: 0;
 
     @media (min-width: @tablet-width) {
-        width: 380px;
+        // width: 380px;    
+        max-width: 380px;
         padding-left: 87px;
         font-size: 12px;
         line-height: 20px;
@@ -165,13 +175,13 @@
     }
 
     @media (min-width: @desktop-width) {      
-        width: 935px; 
-        // width: auto; 
+        // width: 935px;
+        width: 100%;
         position: absolute;
         margin: 0;
-        margin-left: -15px;
+        // margin-left: -15px;
         top: 50%;
-        transform: translateY(50%);
+        transform: translateY(-50%);
         z-index: 1;
     }
 }
