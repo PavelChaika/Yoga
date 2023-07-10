@@ -125,7 +125,7 @@
         <section class="main__direction direction" id="direction">
             <div class="direction__number number">02</div>
             <div class="body__container direction__wrapper">
-                <h2 class="direction__title">
+                <h2 class="direction__title title">
                     Направления
                 </h2>
                 <div class="direction__wrap">
@@ -201,7 +201,7 @@
         <section class="main__subscription subscription" id="subscription">   
             <div class="subscription__number number">03</div>         
             <div class="body__container subscription__wrapper">                
-                <h2 class="subscription__title">
+                <h2 class="subscription__title title">
                     Абонементы
                 </h2>
                 <div class="subscription__list">
@@ -358,7 +358,7 @@
         <section class="main__team team" id="team">
             <div class="team__number number">04</div>            
             <div class="body__container team__wrapper">                
-                <h2 class="team__title">
+                <h2 class="team__title title">
                     Наша команда
                 </h2>
                 <div class="team__container">
@@ -886,7 +886,7 @@
         <section class="main__review review" id="review">   
             <div class="review__number number">05</div>         
             <div class="body__container review__wrapper">                
-                <h2 class="review__title">
+                <h2 class="review__title title">
                     Отзывы
                 </h2>
 
@@ -1164,10 +1164,10 @@
                         </div>
                     </div>
 
-                    <div class="review__btn btn j-review-controls">
-                        <div class="swiper-button-prev review__btn-back"></div>
+                    <div class="review__btn-wrap j-review-controls">
+                        <div class="swiper-button-prev review__btn review__btn--back"></div>
                         <div class="swiper-pagination review__pagination"></div>
-                        <div class="swiper-button-next review__btn-forward"></div>
+                        <div class="swiper-button-next review__btn review__btn--forward"></div>
                     </div>
                 </div>
 
@@ -1348,7 +1348,7 @@
 
         const teamSwiper = new Swiper(teamSwiperContainer, {
             speed: 200,
-            spaceBetween: 16,
+            spaceBetween: 20,
             navigation: {// Buttons
                 nextEl: '.j-team-controls .swiper-button-next',
                 prevEl: '.j-team-controls .swiper-button-prev',
@@ -1388,7 +1388,7 @@
                 768: {
                     direction: 'vertical',
                     slidesPerView: 2,
-                    spaceBetween: 18,
+                    spaceBetween: 20,
                 },
                 1024: {
                     direction: 'horizontal',
